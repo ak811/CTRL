@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "CTRL: Cross-Task Reinforcement Learning"
+type: software
+authors:
+  - alias: ak811
+version: 0.2.0
+license: MIT
+repository-code: "https://github.com/ak811/ctrl"
+keywords:
+  - reinforcement learning
+  - transfer learning
+  - meta-learning
+  - continual learning

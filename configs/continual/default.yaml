@@ -1,0 +1,28 @@
+# Sine-regression benchmark - configuration used for the results reported in README.md.
+n_seeds: 3
+hidden_dim: 40
+hidden_layers: 2
+batch_size: 100
+lr: 0.001
+
+# Supervised transfer
+transfer_steps: 5000
+
+# MAML (Finn et al., 2017 sine protocol: K=10, one inner step, alpha=0.01)
+maml_iterations: 10000
+maml_meta_batch: 10
+maml_k_shot: 10
+maml_inner_steps: 1
+maml_inner_lr: 0.01
+maml_meta_lr: 0.001
+maml_first_order: false
+maml_eval_tasks: 100
+maml_eval_steps: 10
+
+# Continual learning
+cl_steps_per_task: 3000
+cl_scenario: task        # task (multi-head) | domain (single head)
+ewc_lambda: 100.0
+ewc_mode: separate       # separate | online
+ewc_online_gamma: 1.0
+ewc_fisher_samples: 500

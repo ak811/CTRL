@@ -1,0 +1,20 @@
+# Reptile over Pong mode x difficulty variants (difficulty 3 held out). Compute-heavy.
+env: pong
+algorithm: reptile
+iterations: 200
+meta_batch_size: 2
+inner_steps: 3
+episodes_per_step: 1
+inner_lr: 0.0005
+inner_optimizer: adam
+meta_lr: 0.5
+anneal_meta_lr: true
+gamma: 0.99
+entropy_coef: 0.01
+max_episode_steps: 1000
+hidden_sizes: [128, 64]
+frame_stack: 4
+eval_every: 25
+eval_tasks: 2
+eval_episodes: 1
+final_eval_tasks: 4

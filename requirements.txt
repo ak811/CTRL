@@ -1,20 +1,12 @@
-# Core
-numpy==1.24.4
-torch==2.0.1
-torchvision==0.15.2
-
-# Gymnasium / Atari
-gymnasium==0.29.1
-ale-py==0.8.1
-autorom[accept-rom-license]==0.6.1
-
-# RL training
-stable-baselines3==2.3.2
-
-# Utilities
-opencv-python-headless==4.7.0.72
-matplotlib==3.7.1
-imageio==2.34.2
-imageio-ffmpeg==0.4.8
-psutil==5.9.5
-tqdm==4.66.4
+# Runtime dependencies (mirrors pyproject.toml, including the Atari and TensorBoard extras).
+# Preferred install:  pip install -e ".[atari,tensorboard]"     (add ,dev for tests/linting)
+# CPU-only PyTorch:    pip install torch --index-url https://download.pytorch.org/whl/cpu
+numpy>=1.24
+torch>=2.1
+gymnasium>=1.0
+ale-py>=0.10
+stable-baselines3>=2.4
+opencv-python-headless>=4.8
+matplotlib>=3.7
+pyyaml>=6.0
+tensorboard>=2.14

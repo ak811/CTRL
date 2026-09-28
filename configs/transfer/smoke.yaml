@@ -1,0 +1,10 @@
+# CI / smoke-test configuration: exercises the full pipeline in seconds.
+env: snake
+timesteps: 1024
+n_envs: 2
+n_steps: 128
+batch_size: 128
+n_epochs: 1
+eval_freq: 512
+eval_episodes: 1
+tensorboard: false

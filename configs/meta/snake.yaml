@@ -1,0 +1,19 @@
+# Reptile over Snake tasks (held-out action permutations, randomised food reward).
+env: snake
+algorithm: reptile
+iterations: 500
+meta_batch_size: 4
+inner_steps: 5
+episodes_per_step: 2
+inner_lr: 0.001
+inner_optimizer: adam
+meta_lr: 0.5
+anneal_meta_lr: true
+gamma: 0.99
+entropy_coef: 0.01
+max_episode_steps: 200
+hidden_sizes: [128, 64]
+eval_every: 50
+eval_tasks: 8
+eval_episodes: 3
+final_eval_tasks: 32

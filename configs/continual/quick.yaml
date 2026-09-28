@@ -1,0 +1,8 @@
+# Smoke-test configuration (~1 minute on CPU). Not intended for reporting results.
+n_seeds: 2
+transfer_steps: 300
+maml_iterations: 200
+maml_meta_batch: 4
+maml_eval_tasks: 10
+cl_steps_per_task: 200
+ewc_fisher_samples: 100

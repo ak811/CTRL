@@ -1,14 +1,36 @@
-.venv/
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.swp
-.DS_Store
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+
+# Experiment artefacts
 outputs/
 videos/
-logs/
-models/
-checkpoints/
-plots/
-tb/
+runs/
+wandb/
+*.zip
+*.pt
+*.pth
+!docs/figures/*.png
+
+# OS / editors
+.DS_Store
+*.swp
+.idea/
+.vscode/
