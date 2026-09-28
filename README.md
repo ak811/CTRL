@@ -1,6 +1,6 @@
 <div align="center">
 
-# CTRL — Cross-Task Reinforcement Learning
+# CTRL: Cross-Task Reinforcement Learning
 
 **A reproducible research framework for transfer, meta- and continual learning across related decision-making tasks.**
 
@@ -11,7 +11,7 @@
 [![Code style: Ruff](https://img.shields.io/badge/code%20style-ruff-261230)](https://github.com/astral-sh/ruff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-[Methods](docs/methods.md) · [Experiments](docs/experiments.md) · [Architecture](docs/architecture.md) · [Changelog](CHANGELOG.md)
+[Methods](docs/methods.md) · [Experiments](docs/experiments.md) · [Architecture](docs/architecture.md)
 
 </div>
 
@@ -74,7 +74,7 @@ ctrl/
 ├── tests/                  # pytest suite
 ├── docs/                   # methods, protocols, architecture, figures
 ├── pyproject.toml · requirements.txt · Makefile · Dockerfile
-└── CHANGELOG.md · CONTRIBUTING.md · CITATION.cff · LICENSE
+└── CONTRIBUTING.md · CITATION.cff · LICENSE
 ```
 
 ---
@@ -275,26 +275,6 @@ make smoke         # end-to-end CLI run
 The test suite covers configuration parsing, Gymnasium API compliance and determinism for every environment, Pong preprocessing, gradient flow through MAML, Fisher computation and multi-task EWC protection, REINFORCE edge cases, Reptile updates, PPO weight transfer and encoder freezing. It also contains a regression test for each bug fixed in 0.2.0. CI runs lint, the test matrix on Python 3.10–3.12 and the smoke test on every push.
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for conventions and [`docs/architecture.md`](docs/architecture.md) for how to add a new environment or method.
-
----
-
-## What's new in 0.2.0
-
-**Correctness fixes**
-
-- MAML never updated its meta-parameters.
-- PPO transfer crashed on start-up because of a redundant image transpose.
-- Pong failed to load on Gymnasium ≥ 1.0.
-- REINFORCE produced NaN on one-step episodes.
-- EWC protected only the most recent task and used a biased empirical Fisher.
-- The environments used unseeded RNGs.
-- Snake had a tail-collision bug, did not distinguish head from body, and could loop forever on a full board.
-
-**Additions:** actual cross-domain weight transfer, task distributions with held-out splits, multi-task and random baselines, continual-learning metrics, CI reporting, a typed configuration system, and the test suite, CI, packaging and documentation.
-
-**Structural change:** the `src/ctrl/` layout was flattened so that packages live at the repository root.
-
-Full details are in [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
