@@ -204,8 +204,9 @@ Produced by `scripts/reproduce_continual.sh` (configuration [`configs/continual/
 | Scratch | 4.44 ± 0.90 | 4.08 ± 0.41 | 4.05 ± 1.20 |
 
 <p align="center">
-  <img src="docs/figures/few_shot_adaptation.png" width="48%" alt="Few-shot adaptation curves">
-  <img src="docs/figures/qualitative.png" width="48%" alt="Qualitative MAML fits">
+  <img src="docs/figures/few_shot_adaptation.png" width="80%" alt="Few-shot adaptation curves">
+  <br>
+  <img src="docs/figures/qualitative.png" width="80%" alt="Qualitative MAML fits">
 </p>
 
 Before adaptation, MAML and multi-task pretraining are indistinguishable: both predict roughly the mean function. After a single gradient step, the MAML initialisation reaches **4.7× lower error** than the pretrained baseline, and after ten steps the gap grows to **~10×**. This reproduces the qualitative result of Finn et al. (2017). The effect comes entirely from the meta-objective, because both models are trained on the same task distribution.
